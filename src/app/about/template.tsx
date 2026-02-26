@@ -10,6 +10,7 @@ export default function AboutTemplate({children}: { children: React.ReactNode}){
             <div>Template 布局</div>
             <div>template计数 {count}</div>
             <div onClick={handleAdd}> + 1</div>
+            <hr />
             {children}
         </div>
     )

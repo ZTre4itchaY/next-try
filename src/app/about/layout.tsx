@@ -6,7 +6,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
     const [count, setCount] = useState(0)
     const router = useRouter()
     const goRouterB = () => {
-        router.push("/about/b", {})
+        router.push("/about/b?id=4", {})
     }
     return (
         <div>
