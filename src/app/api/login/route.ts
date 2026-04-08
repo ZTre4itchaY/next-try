@@ -17,6 +17,21 @@ export async function POST(request: NextRequest){
 
         return NextResponse.json({ code: 0, message: '登录成功' })
 
+    } else {
+        return NextResponse.json({ code: -1, message: '登录失败' })
     }
+}
+
+export async function GET(request: NextRequest){
+
+    const cookieStore = await cookies()
+
+    const token = cookieStore.get('token') 
+
+    if(token && token.value === 'tokenValue'){
+        return NextResponse.json({code: 0})
+    }
+
+    return NextResponse.json({code: -1})
 
 }
